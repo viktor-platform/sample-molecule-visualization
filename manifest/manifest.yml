@@ -1,0 +1,14 @@
+version: '1'
+entity_types:
+  chemistryFolder:
+    has_designer: false
+    show_properties: false
+  chemistry:
+    has_designer: true
+    show_properties: false
+entities:
+- entity_type: chemistryFolder
+  properties:
+    name: chemistry
+metadata:
+  background_image: '3D_molecule.png'
