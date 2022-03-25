@@ -38,7 +38,12 @@ def get_positions(block):
         matches = pattern.finditer(match)
         match_lis = []
         for match in matches:
-            match_lis.append(match.group())
+            string = match.group()
+            if len(string) == 5:
+                match_lis.append(string[0:2])
+                match_lis.append(string[2:])
+            else:
+                match_lis.append(match.group())
 
         origin = int(match_lis[0]) - 1
         destination = int(match_lis[1]) - 1
