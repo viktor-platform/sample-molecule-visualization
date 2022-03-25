@@ -1,8 +1,8 @@
 from viktor.core import ViktorController
 
-class chemistryFolderController(ViktorController):
-    label = 'chemistry Folder'
-    children = ['chemistry']
+class ChemistryFolderController(ViktorController):
+    label = 'Chemistry Folder'
+    children = ['Chemistry']
     show_children_as = 'Cards'
 
-    viktor_convert_entity_field = True
+viktor_convert_entity_field = True

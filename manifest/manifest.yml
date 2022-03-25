@@ -1,14 +1,14 @@
 version: '1'
 entity_types:
-  chemistryFolder:
+  ChemistryFolder:
     has_designer: false
     show_properties: false
-  chemistry:
+  Chemistry:
     has_designer: true
     show_properties: false
 entities:
-- entity_type: chemistryFolder
+- entity_type: ChemistryFolder
   properties:
-    name: chemistry
+    name: Chemistry
 metadata:
   background_image: '3D_molecule.png'

@@ -1,7 +1,7 @@
 from viktor.parametrization import Parametrization, Section, NumberField, TextField, Table, ToggleButton, Lookup, IsNotEqual
 
 
-class chemistryParametrization(Parametrization):
+class ChemistryParametrization(Parametrization):
     elements = Section('Element input')
     elements.input = TextField('Which element')
 

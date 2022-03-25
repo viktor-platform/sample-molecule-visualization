@@ -1,2 +1,2 @@
-from .chemistryFolder.controller import chemistryFolderController
-from .chemistry.controller import chemistryController
+from .ChemistryFolder.controller import ChemistryFolderController
+from .Chemistry.controller import ChemistryController
