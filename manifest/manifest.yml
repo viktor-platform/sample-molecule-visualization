@@ -11,8 +11,5 @@ entities:
   properties:
     name: Chemistry
 metadata:
-<<<<<<< HEAD
-  background_image: '3D_molecule.png'
-=======
   background_image: 'Chemistry_background.png'
->>>>>>> master
+
