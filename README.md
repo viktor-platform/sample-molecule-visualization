@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/SDK-v12.10.0)
+![](https://img.shields.io/badge/SDK-v12.10.0-blue)
 
 ![](chemistry_gif.gif)
 # Chemistry App
