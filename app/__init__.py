@@ -15,5 +15,11 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 SOFTWARE.
 """
 
-from .chemistry_folder.controller import ChemistryFolderController
-from .chem.controller import ChemistryController
+from .chemistry_folder.controller import ChemistryFolderController as ChemistryFolder
+from .chem.controller import ChemistryController as Chemistry
+
+from viktor import InitialEntity
+
+initial_entities = [
+    InitialEntity('ChemistryFolder', name='Chemistry')
+]

@@ -33,8 +33,8 @@ from viktor.views import DataResult
 from viktor.views import DataView
 from viktor.views import GeometryResult
 from viktor.views import GeometryView
-from viktor.views import SVGResult
-from viktor.views import SVGView
+from viktor.views import ImageResult
+from viktor.views import ImageView
 
 from .helper_functions import get_positions
 from .parametrization import ChemistryParametrization
@@ -90,13 +90,13 @@ class ChemistryController(ViktorController):
 
         return DataResult(result)
 
-    @SVGView('SMILE', duration_guess=1)
+    @ImageView('SMILE', duration_guess=1)
     def get_smile_2d(self, params, **kwargs):
         """for visualizing a drawing corresponding to a smile"""
         molecule = Chem.MolFromSmiles(params.smile.smile)
         Draw.MolToFile(molecule, 'molecule_drawing.svg')
 
-        return SVGResult.from_path('molecule_drawing.svg')
+        return ImageResult.from_path('molecule_drawing.svg')
 
     @GeometryView('3D', duration_guess=2)
     def get_3d(self, params, **kwargs):
