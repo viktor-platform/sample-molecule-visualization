@@ -3,6 +3,7 @@ from viktor.parametrization import Section
 from viktor.parametrization import Table
 from viktor.parametrization import TextField
 
+from pathlib import Path
 import chemlib
 import numpy as np
 from rdkit import Chem
@@ -23,6 +24,8 @@ from viktor.views import GeometryResult
 from viktor.views import GeometryView
 from viktor.views import ImageResult
 from viktor.views import ImageView
+from viktor.views import WebResult
+from viktor.views import WebView
 
 from helper_functions import get_positions
 
@@ -174,3 +177,11 @@ class ChemistryController(ViktorController):
                 geometries.append(cylinder)
 
         return GeometryResult(geometries)
+    
+    @WebView("What's next?", duration_guess=1)
+    def whats_next(self, params, **kwargs):
+        """Initiates the process of rendering the "What's next" tab."""
+        html_path = Path(__file__).parent / "next_step.html"
+        with html_path.open(encoding="utf-8") as _file:
+            html_string = _file.read()
+        return WebResult(html=html_string)
